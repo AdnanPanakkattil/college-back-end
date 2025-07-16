@@ -25,7 +25,7 @@ class College(models.Model):
     Place = models.CharField(max_length=200 , null=True , blank=True)
     state = models.CharField(max_length=200,null=True , blank=True)
     University_id = models.ForeignKey(University, on_delete=models.CASCADE, null=True, blank=True)
-
+    image = models.ImageField(upload_to='College/', null=True, blank=True)
 
     def __str__(self):
         return self. College_name
